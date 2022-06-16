@@ -8,4 +8,27 @@ public class Studente {
 	 * lo studente è promosso o bocciato
 	 */
 
+	// attributi
+	int idStudente;
+	int percAssenze;
+	double mediaVoti;
+
+	// costruttore
+	public Studente(int idStudente, int percAssenze, double mediaVoti) {
+		super();
+		this.idStudente = idStudente;
+		this.percAssenze = percAssenze;
+		this.mediaVoti = mediaVoti;
+	}
+
+	// metodi
+	boolean promosso() {
+		if (percAssenze >= 25 && percAssenze <= 50 && mediaVoti > 2) {
+			return true;
+		} else if (percAssenze < 25 && mediaVoti >= 2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
